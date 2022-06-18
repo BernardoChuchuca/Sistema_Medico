@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
  */
 public class Ventana extends javax.swing.JFrame {
          private JDesktopPane escritorio;
-         //Vent_Clientes ven=new Vent_Clientes();
+         Vent_Pacientes ven=new Vent_Pacientes();
          Vent_Empleados ven_e=new Vent_Empleados();
         // Inicio ini=new Inicio();
          //Vent_Productos vent_p=new Vent_Productos();
@@ -104,7 +104,7 @@ public class Ventana extends javax.swing.JFrame {
 
         jMenu3.setBackground(new java.awt.Color(102, 204, 255));
         jMenu3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jMenu3.setText("CLIENTE");
+        jMenu3.setText("PACIENTE");
         jMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jMenu3.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -128,7 +128,7 @@ public class Ventana extends javax.swing.JFrame {
 
         jMenu5.setBackground(new java.awt.Color(102, 204, 255));
         jMenu5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jMenu5.setText("PRODUCTOS");
+        jMenu5.setText("MEDICAMENTOS");
         jMenu5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jMenu5.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jMenu5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -235,15 +235,15 @@ public class Ventana extends javax.swing.JFrame {
     private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
         // TODO add your handling code here:
         
-     /*   if(gx.getRol().equals("A")|| gx.getRol().equals("E")){
+        if(gx.getRol().equals("A")|| gx.getRol().equals("E")){
            
-            escritorio.remove(ini);
+            //escritorio.remove(ini);
         escritorio.remove(ven_e);
-        escritorio.remove(ven_f);
-        escritorio.remove(vent_p);
-         escritorio.remove(ven_c_f);
-             escritorio.remove(ven_prov);
-             escritorio.remove(ven_a);
+        //escritorio.remove(ven_f);
+        //escritorio.remove(vent_p);
+         //escritorio.remove(ven_c_f);
+            // escritorio.remove(ven_prov);
+            // escritorio.remove(ven_a);
          
         
         if(ven.isClosed()){
@@ -261,7 +261,7 @@ public class Ventana extends javax.swing.JFrame {
          
             JOptionPane.showMessageDialog(null,"ACCESO BLOQUEADO");
         }
-        */
+        
     }//GEN-LAST:event_jMenu3MouseClicked
 
     private void jMenu4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu4MouseClicked
@@ -360,7 +360,7 @@ public class Ventana extends javax.swing.JFrame {
         
         this.setVisible(false);
         
-       // new Login().setVisible(true);
+        new Login().setVisible(true);
     }//GEN-LAST:event_jMenu7MouseClicked
 
     private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked

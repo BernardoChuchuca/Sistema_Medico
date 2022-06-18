@@ -8,27 +8,25 @@ package vista;
 import controlador.Gestion;
 
 import controlador.GestionPersonas;
-
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import javax.swing.JOptionPane;
-
+//import modelo.Empleado;
 import modelo.Persona;
-
 
 /**
  *
  * @author Bernardo
  */
-public class Vent_Empleados extends javax.swing.JInternalFrame {
+public class Vent_Pacientes extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Vent_Clientes
      */
-    public Vent_Empleados() {
+    public Vent_Pacientes() {
         initComponents();
         setClosable(true);
         setDefaultLocale(null);
@@ -46,11 +44,11 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
+        jButton3 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
@@ -70,10 +68,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         jnom = new javax.swing.JTextField();
         jape = new javax.swing.JTextField();
         jeda = new javax.swing.JTextField();
-        jPanel5 = new javax.swing.JPanel();
         jcar = new javax.swing.JTextField();
-        a = new javax.swing.JRadioButton();
-        e = new javax.swing.JRadioButton();
         jcorr = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
         jusu = new javax.swing.JTextField();
@@ -93,10 +88,18 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         setPreferredSize(new java.awt.Dimension(1342, 685));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jScrollPane1.setBackground(new java.awt.Color(153, 153, 153));
+        jScrollPane1.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jScrollPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jScrollPane1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jScrollPane1.setOpaque(false);
+
         tabla.setBackground(new java.awt.Color(255, 255, 153));
         tabla.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tabla.setFont(new java.awt.Font("DialogInput", 0, 14)); // NOI18N
-        tabla.setModel(new Tabla_Empleados());
+        tabla.setModel(new vista.Tabla_Pacientes());
+        tabla.setGridColor(new java.awt.Color(153, 153, 153));
+        tabla.setOpaque(false);
         tabla.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tablaMouseClicked(evt);
@@ -104,16 +107,30 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(tabla);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(429, 25, 890, -1));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(458, 25, 860, 520));
 
         jPanel1.setOpaque(false);
         jPanel1.setLayout(new java.awt.GridLayout(1, 5));
+
+        jButton3.setBackground(new java.awt.Color(0, 0, 51));
+        jButton3.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("REGISTRAR");
+        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 51));
         jButton1.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("ACTUALIZAR");
         jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -121,11 +138,25 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         });
         jPanel1.add(jButton1);
 
+        jButton5.setBackground(new java.awt.Color(0, 0, 51));
+        jButton5.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("LISTAR");
+        jButton5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton5);
+
         jButton4.setBackground(new java.awt.Color(0, 0, 51));
         jButton4.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("ELIMINAR");
         jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -138,6 +169,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("BUSCAR");
         jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -145,31 +177,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         });
         jPanel1.add(jButton2);
 
-        jButton5.setBackground(new java.awt.Color(0, 0, 51));
-        jButton5.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("LISTAR");
-        jButton5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton5);
-
-        jButton3.setBackground(new java.awt.Color(0, 0, 51));
-        jButton3.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("REGISTRAR");
-        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton3);
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 601, 1330, 50));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 1330, 60));
 
         jPanel4.setOpaque(false);
         jPanel4.setLayout(new java.awt.GridLayout(1, 2));
@@ -209,8 +217,9 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("CARGO : ");
+        jLabel6.setText("TIPO : ");
         jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel2.add(jLabel6);
 
         jLabel11.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -221,7 +230,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("GENERO :");
+        jLabel4.setText("GENERO:");
         jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel2.add(jLabel4);
 
@@ -249,33 +258,33 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         jPanel3.setLayout(new java.awt.GridLayout(11, 1));
 
         lcod.setEditable(false);
-        lcod.setBackground(new java.awt.Color(204, 204, 204));
+        lcod.setBackground(new java.awt.Color(153, 153, 153));
         lcod.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         lcod.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel3.add(lcod);
 
-        jced.setBackground(new java.awt.Color(204, 204, 204));
+        jced.setBackground(new java.awt.Color(153, 153, 153));
         jced.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jced.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jced.setAlignmentX(0.2F);
         jced.setAlignmentY(0.2F);
         jPanel3.add(jced);
 
-        jnom.setBackground(new java.awt.Color(204, 204, 204));
+        jnom.setBackground(new java.awt.Color(153, 153, 153));
         jnom.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jnom.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jnom.setAlignmentX(0.2F);
         jnom.setAlignmentY(0.2F);
         jPanel3.add(jnom);
 
-        jape.setBackground(new java.awt.Color(204, 204, 204));
+        jape.setBackground(new java.awt.Color(153, 153, 153));
         jape.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jape.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jape.setAlignmentX(0.2F);
         jape.setAlignmentY(0.2F);
         jPanel3.add(jape);
 
-        jeda.setBackground(new java.awt.Color(204, 204, 204));
+        jeda.setBackground(new java.awt.Color(153, 153, 153));
         jeda.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jeda.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jeda.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -285,42 +294,16 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         });
         jPanel3.add(jeda);
 
-        jPanel5.setBackground(new java.awt.Color(153, 153, 255));
-        jPanel5.setLayout(new java.awt.GridLayout(1, 3));
-
         jcar.setEditable(false);
-        jcar.setBackground(new java.awt.Color(204, 204, 204));
+        jcar.setBackground(new java.awt.Color(153, 153, 153));
         jcar.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jcar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jcar.setText("P");
         jcar.setAlignmentX(0.2F);
         jcar.setAlignmentY(0.2F);
-        jPanel5.add(jcar);
+        jPanel3.add(jcar);
 
-        a.setBackground(new java.awt.Color(255, 102, 102));
-        a.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        a.setText("A");
-        a.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        a.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aActionPerformed(evt);
-            }
-        });
-        jPanel5.add(a);
-
-        e.setBackground(new java.awt.Color(255, 102, 102));
-        e.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        e.setText("E");
-        e.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        e.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eActionPerformed(evt);
-            }
-        });
-        jPanel5.add(e);
-
-        jPanel3.add(jPanel5);
-
-        jcorr.setBackground(new java.awt.Color(204, 204, 204));
+        jcorr.setBackground(new java.awt.Color(153, 153, 153));
         jcorr.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jcorr.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel3.add(jcorr);
@@ -360,19 +343,21 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
 
         jPanel3.add(jPanel6);
 
-        jcont.setBackground(new java.awt.Color(204, 204, 204));
+        jcont.setEditable(false);
+        jcont.setBackground(new java.awt.Color(153, 153, 153));
         jcont.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jcont.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jcont.setText("null");
         jPanel3.add(jcont);
 
-        jtel.setBackground(new java.awt.Color(204, 204, 204));
+        jtel.setBackground(new java.awt.Color(153, 153, 153));
         jtel.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jtel.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtel.setAlignmentX(0.2F);
         jtel.setAlignmentY(0.2F);
         jPanel3.add(jtel);
 
-        jdir.setBackground(new java.awt.Color(204, 204, 204));
+        jdir.setBackground(new java.awt.Color(153, 153, 153));
         jdir.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jdir.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jdir.setAlignmentX(0.2F);
@@ -381,10 +366,9 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
 
         jPanel4.add(jPanel3);
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 410, 500));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 440, 540));
 
-        jLabel12.setBackground(new java.awt.Color(153, 153, 0));
-        jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel12.setBackground(new java.awt.Color(255, 153, 0));
         jLabel12.setOpaque(true);
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1330, 650));
 
@@ -393,12 +377,14 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
 
     
     
-   
     
+    
+  
     
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         Persona per=new Persona();
+       
         java.util.Date utilDate= new java.util.Date();
        
         utilDate=Date.valueOf(jeda.getText());
@@ -406,12 +392,13 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         
         
         java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
-      
+        
+         
+         
         if(new Gestion().Cedula(jced.getText()) && jced.getText().length()==10){
             
         if(!Existe(jced.getText())){
-            if(jcar.getText().length()==1){
-             if(jcar.getText().equals("A") || jcar.getText().equals("E")  ){
+            
         per.setPer_id(codigoid());
         per.setPer_cedula(jced.getText());
         per.setPer_nombre(jnom.getText().toUpperCase());
@@ -420,23 +407,12 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         per.setPer_telefono(jtel.getText());
         per.setPer_fec_nac(sqlDate);
        
-        per.setPer_rol(jcar.getText().toUpperCase());
-        per.setPer_clave(jcont.getText());
+        per.setPer_rol("P");
+        per.setPer_clave("null");
         per.setPer_genero(jusu.getText());
         per.setPer_email(jcorr.getText());
-         new GestionPersonas().InsertPersona(per);
+        new GestionPersonas().InsertPersona(per);
          JOptionPane.showMessageDialog(null,"REGISTRO CORRECTO");
-        
-        
-        }else{
-               JOptionPane.showMessageDialog(null,"TIPO DE CARGO INCORRECTO (A-E)");           
-         }
-        
-            }else{
-             JOptionPane.showMessageDialog(null,"TIPO DE CARGO DEMACIADO LARGO SOLO DE ADMITE UN CARACTER");      
-            
-            }
-        
         
         }  else{
         JOptionPane.showMessageDialog(null,"PERSONA YA REGISTRADA");
@@ -448,10 +424,10 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         }
        
        
-     
       
         
-       
+        
+        
        
         
         
@@ -459,17 +435,18 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-         ArrayList<Persona>lisemp=new ArrayList<>();
+        ArrayList<Persona>liscli=new ArrayList<>();
         ArrayList<Persona>listotal=new GestionPersonas().getListPersonas();
         
         for (int i = 0; i < listotal.size(); i++) {
             
-            if(listotal.get(i).getPer_rol().equals("A") || listotal.get(i).getPer_rol().equals("E") ){
-                lisemp.add(listotal.get(i));
+            if(listotal.get(i).getPer_rol().equals("P")){
+                liscli.add(listotal.get(i));
             
             }
         }
-       tabla.setModel(new Tabla_Empleados(lisemp));
+        
+       tabla.setModel(new Tabla_Empleados(liscli));
        
        // System.out.println(new GestionPersonas().getBuscarCliente("1").getPer_id());
     }//GEN-LAST:event_jButton5ActionPerformed
@@ -479,35 +456,26 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         
         //System.out.println(codigo(getlista()));
         if(Existe(jced.getText())){
-            
         Persona per=new GestionPersonas().getBuscarCedula(jced.getText());
-        
-        if(per.getPer_rol().equals("A")||per.getPer_rol().equals("E") ){
         
         lcod.setText(String.valueOf(per.getPer_id()));
         jced.setText(per.getPer_cedula());
         jnom.setText(per.getPer_nombre());
         jape.setText(per.getPer_apellido());
-        jcar.setText(per.getPer_rol());
+        //jcar.setText(per.getEmp_cargo());
         jusu.setText(per.getPer_genero());
-        jcont.setText(per.getPer_clave());
+       // jcont.setText(per.getEmp_contrasena());
         jdir.setText(per.getPer_direccion());
         jtel.setText(per.getPer_telefono());
         jcorr.setText(per.getPer_email());
-        
         jeda.setText(String.valueOf((Date)per.getPer_fec_nac()));
-        
-        }else{
+        } else {
                 
-                 JOptionPane.showMessageDialog(null,"EMPLEADO NO EXISTE");
-                
-        }
-       
-        
-         } else {
-                
-                JOptionPane.showMessageDialog(null,"EMPLEADO NO EXISTE");
+                JOptionPane.showMessageDialog(null,"PERSONA NO EXISTE");
           }
+        
+        //jeda.setText(String.valueOf(per.getPer_edad()));
+        
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -534,11 +502,9 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         
         Persona per=new Persona();
-         java.util.Date utilDate= new java.util.Date();
+        java.util.Date utilDate= new java.util.Date();
        
         utilDate=Date.valueOf(jeda.getText());
-        
-        
         
         java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
         per.setPer_id(Integer.parseInt(lcod.getText()));
@@ -547,17 +513,21 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         per.setPer_apellido(jape.getText());
         per.setPer_direccion(jdir.getText());
         per.setPer_telefono(jtel.getText());
-        per.setPer_fec_nac(sqlDate);
-        per.setPer_rol(jcar.getText());
-        per.setPer_clave(jcont.getText());
-        per.setPer_genero(jusu.getText());
+         per.setPer_fec_nac(sqlDate);
+        //per.setPer_edad(Integer.parseInt(jeda.getText()));
+       /* per.setEmp_cargo(jcar.getText());
+        per.setEmp_contrasena(jcont.getText());
+        per.setEmp_usuario(jusu.getText());*/
         per.setPer_email(jcorr.getText());
+       per.setPer_rol("P");
+        per.setPer_clave("null");
+        per.setPer_genero(jusu.getText());
         
         
         
         
         new GestionPersonas().ActualizarPersona(per);
-        JOptionPane.showMessageDialog(null,"ACTULIZACION CORRECTA");
+        JOptionPane.showMessageDialog(null,"ACTUALIZACION CORRECTO");
        
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -574,48 +544,27 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jedaMouseClicked
 
-    private void aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aActionPerformed
-        // TODO add your handling code here:
-         if(a.isSelected()){
-        jcar.setText("A");
-       
-        e.setSelected(false);
-        }
-         
-   a.setSelected(true);
-    }//GEN-LAST:event_aActionPerformed
-
-    private void eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eActionPerformed
-        // TODO add your handling code here:
-         if(e.isSelected()){
-        jcar.setText("E");
-       
-        a.setSelected(false);
-        }
-         e.setSelected(true);
-    }//GEN-LAST:event_eActionPerformed
-
     private void a1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_a1ActionPerformed
         // TODO add your handling code here:
         if(a1.isSelected()){
-        jusu.setText("M");
-       
-        e1.setSelected(false);
+            jusu.setText("M");
+
+            e1.setSelected(false);
         }
-         
-   a1.setSelected(true);
-        
+
+        a1.setSelected(true);
+
     }//GEN-LAST:event_a1ActionPerformed
 
     private void e1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e1ActionPerformed
         // TODO add your handling code here:
         if(e1.isSelected()){
-        jusu.setText("F");
-       
-        a1.setSelected(false);
+            jusu.setText("F");
+
+            a1.setSelected(false);
         }
-         e1.setSelected(true);
-        
+        e1.setSelected(true);
+
     }//GEN-LAST:event_e1ActionPerformed
 
     /**
@@ -624,9 +573,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton a;
     private javax.swing.JRadioButton a1;
-    private javax.swing.JRadioButton e;
     private javax.swing.JRadioButton e1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -649,7 +596,6 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jape;
@@ -666,7 +612,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
     private javax.swing.JTable tabla;
     // End of variables declaration//GEN-END:variables
 
-  public boolean Existe(String cedula){
+public boolean Existe(String cedula){
     
         boolean exi=false;
         ArrayList<Persona>lis=new GestionPersonas().getListPersonas();
@@ -685,7 +631,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
     return exi;
     }
 
-public int  codigo(ArrayList<Integer>lis){
+   public int  codigo(ArrayList<Integer>lis){
       boolean n=false;
       int num=1;
         while (n==false) {      
@@ -707,8 +653,8 @@ public int  codigo(ArrayList<Integer>lis){
         }
     return list;
     }
-    
-     public int codigoid(){
+
+public int codigoid(){
    List<Persona>lispro=new GestionPersonas().getListPersonas();
            
    ArrayList<Integer>lis=new ArrayList<>();
@@ -727,7 +673,6 @@ public int  codigo(ArrayList<Integer>lis){
    
    }
    
-
 
 }
 

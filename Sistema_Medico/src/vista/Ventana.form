@@ -48,7 +48,7 @@
                     <LineBorder/>
                   </Border>
                 </Property>
-                <Property name="text" type="java.lang.String" value="CLIENTE"/>
+                <Property name="text" type="java.lang.String" value="PACIENTE"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Default Cursor"/>
                 </Property>
@@ -92,7 +92,7 @@
                     <LineBorder/>
                   </Border>
                 </Property>
-                <Property name="text" type="java.lang.String" value="PRODUCTOS"/>
+                <Property name="text" type="java.lang.String" value="MEDICAMENTOS"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Default Cursor"/>
                 </Property>
