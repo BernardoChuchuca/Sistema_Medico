@@ -46,8 +46,10 @@ public class GestionPersonas {
             per.setPer_email(rs.getString("PER_EMAIL"));
           per.setPer_genero(rs.getString("PER_GENERO").trim());
             per.setPer_clave(rs.getString("PER_CLAVE").trim());
+            per.setEsp_id(rs.getInt("ESP_ID"));
             
            
+            
             
             
             us.add(per);
@@ -70,7 +72,7 @@ public class GestionPersonas {
     
         try {
             cnx= Conexion.getConnection();
-           PreparedStatement pst=cnx.prepareStatement("INSERT INTO PERSONA  VALUES(?,?,?,?,?,?,?,?,?,?,?)"); 
+           PreparedStatement pst=cnx.prepareStatement("INSERT INTO PERSONA  VALUES(?,?,?,?,?,?,?,?,?,?,?,?)"); 
            pst.setInt(1,persona.getPer_id());
            pst.setString(2,persona.getPer_cedula());
            pst.setString(3,persona.getPer_nombre());
@@ -82,6 +84,7 @@ public class GestionPersonas {
            pst.setString(9,persona.getPer_genero());
            pst.setDate(10, persona.getPer_fec_nac());
            pst.setString(11,persona.getPer_clave());
+           pst.setInt(12,persona.getEsp_id());
            
           
           
@@ -147,6 +150,7 @@ public class GestionPersonas {
              cl.setPer_rol(rs.getString("PER_ROL"));
              cl.setPer_genero(rs.getString("PER_GENERO"));
              cl.setPer_clave(rs.getString("PER_CLAVE"));
+             cl.setEsp_id(rs.getInt("ESP_ID"));
              
             
             }
@@ -172,7 +176,7 @@ public class GestionPersonas {
         try{
            cnx= Conexion.getConnection();
             PreparedStatement pst=cnx.prepareStatement(" UPDATE PERSONA SET "
-            +" PER_ID=?,PER_CEDULA=?,PER_NOMBRE=?,PER_APELLIDO=?,PER_DIRECCION=?,PER_TELEFONO=?,PER_EMAIL=?,PER_ROL=?,PER_GENERO=?,PER_FEC_NAC=?,PER_CLAVE=? WHERE PER_CEDULA='"+persona.getPer_cedula()+"'");
+            +" PER_ID=?,PER_CEDULA=?,PER_NOMBRE=?,PER_APELLIDO=?,PER_DIRECCION=?,PER_TELEFONO=?,PER_EMAIL=?,PER_ROL=?,PER_GENERO=?,PER_FEC_NAC=?,PER_CLAVE=?,ESP_ID=? WHERE PER_CEDULA='"+persona.getPer_cedula()+"'");
             //pst.setInt(1,persona.getPer_id());
          pst.setInt(1,persona.getPer_id());
            pst.setString(2,persona.getPer_cedula());
@@ -185,6 +189,7 @@ public class GestionPersonas {
            pst.setString(9,persona.getPer_genero());
            pst.setDate(10, persona.getPer_fec_nac());
           pst.setString(11,persona.getPer_clave());
+          pst.setInt(12,persona.getEsp_id());
            pst.execute();
            
         } catch (SQLException ex){

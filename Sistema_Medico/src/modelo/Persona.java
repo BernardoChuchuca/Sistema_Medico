@@ -13,15 +13,16 @@ import java.sql.Date;
 public class Persona {
     
     
-    private int per_id;
+    private int per_id,esp_id;
     private String per_cedula,per_nombre,per_apellido,per_direccion,per_telefono,per_email,per_rol,per_genero,per_clave;
     private Date per_fec_nac;
 
     public Persona() {
     }
 
-    public Persona(int per_id, String per_cedula, String per_nombre, String per_apellido, String per_direccion, String per_telefono, String per_email, String per_rol, String per_genero, String per_clave, Date per_fec_nac) {
+    public Persona(int per_id, int esp_id, String per_cedula, String per_nombre, String per_apellido, String per_direccion, String per_telefono, String per_email, String per_rol, String per_genero, String per_clave, Date per_fec_nac) {
         this.per_id = per_id;
+        this.esp_id = esp_id;
         this.per_cedula = per_cedula;
         this.per_nombre = per_nombre;
         this.per_apellido = per_apellido;
@@ -33,6 +34,16 @@ public class Persona {
         this.per_clave = per_clave;
         this.per_fec_nac = per_fec_nac;
     }
+
+    public void setEsp_id(int esp_id) {
+        this.esp_id = esp_id;
+    }
+
+    public int getEsp_id() {
+        return esp_id;
+    }
+
+   
 
     
     public void setPer_clave(String per_clave) {

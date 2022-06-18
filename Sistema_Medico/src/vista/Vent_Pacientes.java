@@ -411,6 +411,7 @@ public class Vent_Pacientes extends javax.swing.JInternalFrame {
         per.setPer_clave("null");
         per.setPer_genero(jusu.getText());
         per.setPer_email(jcorr.getText());
+        per.setEsp_id(4);
         new GestionPersonas().InsertPersona(per);
          JOptionPane.showMessageDialog(null,"REGISTRO CORRECTO");
         
@@ -522,6 +523,7 @@ public class Vent_Pacientes extends javax.swing.JInternalFrame {
        per.setPer_rol("P");
         per.setPer_clave("null");
         per.setPer_genero(jusu.getText());
+        per.setEsp_id(4);
         
         
         

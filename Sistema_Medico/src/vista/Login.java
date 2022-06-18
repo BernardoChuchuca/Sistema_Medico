@@ -88,6 +88,7 @@ public class Login extends javax.swing.JFrame {
         tcodigo.setBackground(new java.awt.Color(204, 204, 204));
         tcodigo.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         tcodigo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tcodigo.setText("0107218356");
         tcodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tcodigoActionPerformed(evt);
@@ -103,6 +104,7 @@ public class Login extends javax.swing.JFrame {
         tcon.setBackground(new java.awt.Color(204, 204, 204));
         tcon.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         tcon.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tcon.setText("12345");
         tcon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tconActionPerformed(evt);

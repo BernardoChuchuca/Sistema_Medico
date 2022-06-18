@@ -6,6 +6,7 @@
 package vista;
 
 import controlador.Gestion;
+import controlador.GestionEspecialidad;
 
 import controlador.GestionPersonas;
 
@@ -15,6 +16,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import javax.swing.JOptionPane;
+import modelo.Especialidad;
 
 import modelo.Persona;
 
@@ -30,6 +32,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
      */
     public Vent_Empleados() {
         initComponents();
+        Llenar();
         setClosable(true);
         setDefaultLocale(null);
     }
@@ -64,6 +67,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         lcod = new javax.swing.JTextField();
         jced = new javax.swing.JTextField();
@@ -82,6 +86,9 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         jcont = new javax.swing.JTextField();
         jtel = new javax.swing.JTextField();
         jdir = new javax.swing.JTextField();
+        jPanel7 = new javax.swing.JPanel();
+        esptx = new javax.swing.JTextField();
+        espBox = new javax.swing.JComboBox<>();
         jLabel12 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -175,7 +182,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         jPanel4.setLayout(new java.awt.GridLayout(1, 2));
 
         jPanel2.setOpaque(false);
-        jPanel2.setLayout(new java.awt.GridLayout(11, 1));
+        jPanel2.setLayout(new java.awt.GridLayout(12, 1));
 
         jLabel9.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -243,10 +250,16 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         jLabel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel2.add(jLabel8);
 
+        jLabel13.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setText("ESPECIALIDAD :");
+        jLabel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.add(jLabel13);
+
         jPanel4.add(jPanel2);
 
         jPanel3.setOpaque(false);
-        jPanel3.setLayout(new java.awt.GridLayout(11, 1));
+        jPanel3.setLayout(new java.awt.GridLayout(12, 1));
 
         lcod.setEditable(false);
         lcod.setBackground(new java.awt.Color(204, 204, 204));
@@ -309,7 +322,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
 
         e.setBackground(new java.awt.Color(255, 102, 102));
         e.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        e.setText("E");
+        e.setText("M");
         e.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         e.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -379,6 +392,34 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         jdir.setAlignmentY(0.2F);
         jPanel3.add(jdir);
 
+        jPanel7.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel7.setLayout(new java.awt.GridLayout(1, 2));
+
+        esptx.setEditable(false);
+        esptx.setBackground(new java.awt.Color(204, 204, 204));
+        esptx.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        esptx.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        esptx.setAlignmentX(0.2F);
+        esptx.setAlignmentY(0.2F);
+        jPanel7.add(esptx);
+
+        espBox.setBackground(new java.awt.Color(0, 153, 255));
+        espBox.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        espBox.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        espBox.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                espBoxMouseClicked(evt);
+            }
+        });
+        espBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                espBoxActionPerformed(evt);
+            }
+        });
+        jPanel7.add(espBox);
+
+        jPanel3.add(jPanel7);
+
         jPanel4.add(jPanel3);
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 410, 500));
@@ -411,7 +452,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
             
         if(!Existe(jced.getText())){
             if(jcar.getText().length()==1){
-             if(jcar.getText().equals("A") || jcar.getText().equals("E")  ){
+             if(jcar.getText().equals("A") || jcar.getText().equals("M")  ){
         per.setPer_id(codigoid());
         per.setPer_cedula(jced.getText());
         per.setPer_nombre(jnom.getText().toUpperCase());
@@ -424,6 +465,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         per.setPer_clave(jcont.getText());
         per.setPer_genero(jusu.getText());
         per.setPer_email(jcorr.getText());
+        per.setEsp_id(Integer.parseInt(esptx.getText()));
          new GestionPersonas().InsertPersona(per);
          JOptionPane.showMessageDialog(null,"REGISTRO CORRECTO");
         
@@ -464,7 +506,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         
         for (int i = 0; i < listotal.size(); i++) {
             
-            if(listotal.get(i).getPer_rol().equals("A") || listotal.get(i).getPer_rol().equals("E") ){
+            if(listotal.get(i).getPer_rol().equals("A") || listotal.get(i).getPer_rol().equals("M") ){
                 lisemp.add(listotal.get(i));
             
             }
@@ -496,6 +538,8 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         jcorr.setText(per.getPer_email());
         
         jeda.setText(String.valueOf((Date)per.getPer_fec_nac()));
+        
+        esptx.setText(String.valueOf(per.getEsp_id()));
         
         }else{
                 
@@ -552,6 +596,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         per.setPer_clave(jcont.getText());
         per.setPer_genero(jusu.getText());
         per.setPer_email(jcorr.getText());
+        per.setEsp_id(Integer.parseInt(esptx.getText()));
         
         
         
@@ -588,7 +633,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
     private void eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eActionPerformed
         // TODO add your handling code here:
          if(e.isSelected()){
-        jcar.setText("E");
+        jcar.setText("M");
        
         a.setSelected(false);
         }
@@ -618,6 +663,16 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         
     }//GEN-LAST:event_e1ActionPerformed
 
+    private void espBoxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_espBoxMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_espBoxMouseClicked
+
+    private void espBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_espBoxActionPerformed
+        // TODO add your handling code here:
+        Especialidad esp= new GestionEspecialidad().getBuscarEspecialidadNombre((String.valueOf(espBox.getSelectedItem()).trim()));
+        esptx.setText(String.valueOf(esp.getEsp_id()));
+    }//GEN-LAST:event_espBoxActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -628,6 +683,8 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
     private javax.swing.JRadioButton a1;
     private javax.swing.JRadioButton e;
     private javax.swing.JRadioButton e1;
+    private javax.swing.JComboBox<String> espBox;
+    private javax.swing.JTextField esptx;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -637,6 +694,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -651,6 +709,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jape;
     private javax.swing.JTextField jcar;
@@ -728,6 +787,17 @@ public int  codigo(ArrayList<Integer>lis){
    }
    
 
+      public void Llenar(){
+         // TODO add your handling code here:
+         ArrayList<Especialidad>listE=new GestionEspecialidad().getListEspecialidad();
+        for(int i=0;i< listE.size();i++){
+            if(!(listE.get(i).getEsp_nombre().equals("null"))){
+                 espBox.addItem(listE.get(i).getEsp_nombre());
+            }
+           
+            
+        }
+    }
 
 }
 
