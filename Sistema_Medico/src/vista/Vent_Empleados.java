@@ -272,6 +272,11 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         jced.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jced.setAlignmentX(0.2F);
         jced.setAlignmentY(0.2F);
+        jced.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcedActionPerformed(evt);
+            }
+        });
         jPanel3.add(jced);
 
         jnom.setBackground(new java.awt.Color(204, 204, 204));
@@ -672,6 +677,10 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         Especialidad esp= new GestionEspecialidad().getBuscarEspecialidadNombre((String.valueOf(espBox.getSelectedItem()).trim()));
         esptx.setText(String.valueOf(esp.getEsp_id()));
     }//GEN-LAST:event_espBoxActionPerformed
+
+    private void jcedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcedActionPerformed
 
     /**
      * @param args the command line arguments

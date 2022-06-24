@@ -19,7 +19,7 @@ public class Ventana extends javax.swing.JFrame {
          Vent_Pacientes ven=new Vent_Pacientes();
          Vent_Empleados ven_e=new Vent_Empleados();
         // Inicio ini=new Inicio();
-         //Vent_Productos vent_p=new Vent_Productos();
+         Vent_Medicamentos vent_p=new Vent_Medicamentos();
          //ConsultaFactura ven_c_f=new ConsultaFactura();
          //ConsultaCompra ven_prov=new ConsultaCompra();
          //AnularFactura ven_a=new AnularFactura();
@@ -328,14 +328,14 @@ public class Ventana extends javax.swing.JFrame {
         // TODO add your handling code here:
          
         
-       /* if(gx.getRol().equals("A")|| gx.getRol().equals("E")){
-        escritorio.remove(ini);
+        if(gx.getRol().equals("A")|| gx.getRol().equals("E")){
+        //escritorio.remove(ini);
         escritorio.remove(ven_e);
-        escritorio.remove(ven_f);
+        //escritorio.remove(ven_f);
         escritorio.remove(ven);
-        escritorio.remove(ven_c_f);
-          escritorio.remove(ven_prov);
-          escritorio.remove(ven_a);
+        //escritorio.remove(ven_c_f);
+          //escritorio.remove(ven_prov);
+          //escritorio.remove(ven_a);
         if(vent_p.isClosed()){
             escritorio.remove(vent_p);
             escritorio.add(vent_p);
@@ -350,7 +350,7 @@ public class Ventana extends javax.swing.JFrame {
          
             JOptionPane.showMessageDialog(null,"ACCESO BLOQUEADO");
         }
-        */
+        
        
           
     }//GEN-LAST:event_jMenu5MouseClicked
