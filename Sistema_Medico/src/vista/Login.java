@@ -169,7 +169,7 @@ public class Login extends javax.swing.JFrame {
         
             if(lista.get(i).getPer_cedula().equals(tcodigo.getText()) 
             && lista.get(i).getPer_clave().equals(tcon.getText()) && lista.get(i).getPer_rol().equals("A") || lista.get(i).getPer_cedula().equals(tcodigo.getText()) 
-            && lista.get(i).getPer_clave().equals(tcon.getText()) && lista.get(i).getPer_rol().equals("E")   ){
+            && lista.get(i).getPer_clave().equals(tcon.getText()) && lista.get(i).getPer_rol().equals("M")   ){
                
                 
                 acceso=1;
@@ -196,7 +196,7 @@ public class Login extends javax.swing.JFrame {
                 
                 progreso.setStringPainted(true);
                 progreso.setValue(100);
-                JOptionPane.showMessageDialog(null,"ACABA DE INGRESAR COMO EMPLEADO");
+                JOptionPane.showMessageDialog(null,"ACABA DE INGRESAR COMO MEDICO");
             }
              
                
