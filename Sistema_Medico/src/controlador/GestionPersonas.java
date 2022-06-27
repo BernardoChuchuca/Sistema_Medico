@@ -223,20 +223,7 @@ public class GestionPersonas {
     }
     
     
-    public boolean comparar(int num,ArrayList<Integer>list){
-      boolean res=false;
-        for (int i = 0; i < list.size(); i++) {
-             if(list.get(i)==num){
-                res=true;
-                break;
-            
-             
-             }
-            
-        }
-      return res;
     
-    }
     
     public int  perids(){
        ArrayList<Persona>list1=new GestionPersonas().getListPersonas();
