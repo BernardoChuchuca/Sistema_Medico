@@ -195,6 +195,11 @@ public class Vent_Medicamentos extends javax.swing.JInternalFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Listado"));
 
         tabla.setModel(new Tabla_Medicamentos());
+        tabla.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(tabla);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -310,6 +315,22 @@ public class Vent_Medicamentos extends javax.swing.JInternalFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        if(Existe(jcodigoBarra.getText())){
+            
+        Medicamento med=new GestionMedicamento().getBuscarCodigoBarra(jcodigoBarra.getText());
+        
+         
+        jcodigoBarra.setText(med.getMed_codigo_barra());
+        jmarca.setText(med.getMed_marca());
+        jdescripcion.setText(med.getMed_descripcion());
+        jcantidad.setText(String.valueOf(med.getMed_cantidad()));
+        junidadMedida.setText(med.getMed_unidad_medida());
+        jstock.setText(String.valueOf(med.getMed_stock()));
+        
+       
+        }
+        
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -336,6 +357,18 @@ public class Vent_Medicamentos extends javax.swing.JInternalFrame {
     private void junidadMedidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_junidadMedidaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_junidadMedidaActionPerformed
+
+    private void tablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMouseClicked
+        // TODO add your handling code here:
+        jcodigoBarra.setText((String) tabla.getValueAt(tabla.getSelectedRow(), 1));
+        jmarca.setText((String) tabla.getValueAt(tabla.getSelectedRow(), 2));
+        jdescripcion.setText((String) tabla.getValueAt(tabla.getSelectedRow(), 3));
+        jcantidad.setText((String.valueOf(tabla.getValueAt(tabla.getSelectedRow(), 4))) );
+        junidadMedida.setText((String) tabla.getValueAt(tabla.getSelectedRow(), 5));
+        jstock.setText((String.valueOf(tabla.getValueAt(tabla.getSelectedRow(), 6))));
+    
+       
+    }//GEN-LAST:event_tablaMouseClicked
 
     
     
