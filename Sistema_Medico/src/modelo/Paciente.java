@@ -31,6 +31,13 @@ public class Paciente  extends Persona{
         return id;
     }
 
+    @Override
+    public String toString() {
+        return "Paciente{" + "id=" + id + ", genero=" + genero + '}';
+    }
+    
+    
+
     
     
    

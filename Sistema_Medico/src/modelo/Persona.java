@@ -137,6 +137,11 @@ public class Persona {
         this.per_fec_nac = per_fec_nac;
     }
 
+    @Override
+    public String toString() {
+        return "Persona{" + "per_id=" + per_id + ", esp_id=" + esp_id + ", per_cedula=" + per_cedula + ", per_nombre=" + per_nombre + ", per_apellido=" + per_apellido + ", per_direccion=" + per_direccion + ", per_telefono=" + per_telefono + ", per_email=" + per_email + ", per_rol=" + per_rol + ", per_genero=" + per_genero + ", per_clave=" + per_clave + ", per_fec_nac=" + per_fec_nac + '}';
+    }
+
    
     
     public int calcularEdad(){
