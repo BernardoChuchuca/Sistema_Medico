@@ -743,8 +743,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
     
     return exi;
     }
-
-public int  codigo(ArrayList<Integer>lis){
+/*public int  codigo(ArrayList<Integer>lis){
       boolean n=false;
       int num=1;
         while (n==false) {      
@@ -757,6 +756,7 @@ public int  codigo(ArrayList<Integer>lis){
 
       return num;
      }
+*/
     
     public  ArrayList<Integer>getlista(){
         ArrayList<Integer>list=new ArrayList<>();

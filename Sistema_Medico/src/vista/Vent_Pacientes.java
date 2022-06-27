@@ -633,7 +633,7 @@ public boolean Existe(String cedula){
     return exi;
     }
 
-   public int  codigo(ArrayList<Integer>lis){
+   /*public int  codigo(ArrayList<Integer>lis){
       boolean n=false;
       int num=1;
         while (n==false) {      
@@ -646,7 +646,7 @@ public boolean Existe(String cedula){
 
       return num;
      }
-    
+    */
     public  ArrayList<Integer>getlista(){
         ArrayList<Integer>list=new ArrayList<>();
         ArrayList<Persona>list1=new GestionPersonas().getListPersonas();
