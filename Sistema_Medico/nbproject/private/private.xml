@@ -7,23 +7,9 @@
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Medico.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/Gestion.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/GestionMedicamento.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Vent_Empleados.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Paciente.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/Conexion.java</file>
-<<<<<<< HEAD
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/GestionEspecialidad.java</file>
-=======
-            <file>file:/C:/Users/Bernardo/Documents/NetBeansProjects/Sistema/Sistema_Medico/Sistema_Medico/src/controlador/GestionPersonas.java</file>
-            <file>file:/C:/Users/Bernardo/Documents/NetBeansProjects/Sistema/Sistema_Medico/Sistema_Medico/src/vista/Ventana.java</file>
-            <file>file:/C:/Users/Bernardo/Documents/NetBeansProjects/Sistema/Sistema_Medico/Sistema_Medico/src/controlador/Conexion.java</file>
-            <file>file:/C:/Users/Bernardo/Documents/NetBeansProjects/Sistema/Sistema_Medico/Sistema_Medico/src/vista/Vent_Empleados.java</file>
-            <file>file:/C:/Users/Bernardo/Documents/NetBeansProjects/Sistema/Sistema_Medico/Sistema_Medico/src/vista/Tabla_Empleados.java</file>
-            <file>file:/C:/Users/Bernardo/Documents/NetBeansProjects/Sistema/Sistema_Medico/Sistema_Medico/src/controlador/GestionEspecialidad.java</file>
-            <file>file:/C:/Users/Bernardo/Documents/NetBeansProjects/Sistema/Sistema_Medico/Sistema_Medico/src/vista/Login.java</file>
-            <file>file:/C:/Users/Bernardo/Documents/NetBeansProjects/Sistema/Sistema_Medico/Sistema_Medico/src/modelo/Persona.java</file>
-            <file>file:/C:/Users/Bernardo/Documents/NetBeansProjects/Sistema/Sistema_Medico/Sistema_Medico/src/vista/Vent_Pacientes.java</file>
-            <file>file:/C:/Users/Bernardo/Documents/NetBeansProjects/Sistema/Sistema_Medico/Sistema_Medico/src/modelo/Especialidad.java</file>
->>>>>>> ffad74d1fbf5d1a6560c4549fd3062dd8e1b0202
-=======
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Tabla_Medicamentos.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Vent_Medicamentos.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Persona.java</file>
@@ -31,7 +17,6 @@
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Login.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Medicamento.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Vent_Pacientes.java</file>
->>>>>>> b67520ed5b7db9f06c41f41efc23e7bb13a8016b
         </group>
     </open-files>
 </project-private>
