@@ -20,8 +20,8 @@ public class Ventana extends javax.swing.JFrame {
          Vent_Empleados ven_e=new Vent_Empleados();
         // Inicio ini=new Inicio();
          Vent_Medicamentos vent_p=new Vent_Medicamentos();
-         Turno tur=new Turno();
-         //ConsultaFactura ven_c_f=new ConsultaFactura();
+         //Turno tur=new Vent_Turno();
+         Vent_Turno ven_c_f=new Vent_Turno();
          //ConsultaCompra ven_prov=new ConsultaCompra();
          //AnularFactura ven_a=new AnularFactura();
         
@@ -143,7 +143,7 @@ public class Ventana extends javax.swing.JFrame {
 
         jMenu6.setBackground(new java.awt.Color(102, 204, 255));
         jMenu6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jMenu6.setText("FACTURA");
+        jMenu6.setText("TURNO");
         jMenu6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jMenu6.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jMenu6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -260,9 +260,9 @@ public class Ventana extends javax.swing.JFrame {
             //escritorio.remove(ini);
         escritorio.remove(ven_e);
         //escritorio.remove(ven_f);
-        escritorio.remove(tur);
+        //escritorio.remove(tur);
         escritorio.remove(vent_p);
-         //escritorio.remove(ven_c_f);
+         escritorio.remove(ven_c_f);
             // escritorio.remove(ven_prov);
             //escritorio.remove(ven_a);
          
@@ -292,9 +292,9 @@ public class Ventana extends javax.swing.JFrame {
             escritorio.remove(ven);
             //escritorio.remove(ven_f);
             // escritorio.remove(ini);
-            escritorio.remove(tur);
+            //escritorio.remove(tur);
              escritorio.remove(vent_p);
-             //escritorio.remove(ven_c_f);
+             escritorio.remove(ven_c_f);
             // escritorio.remove(ven_a);
              
               // escritorio.remove(ven_prov);
@@ -317,6 +317,35 @@ public class Ventana extends javax.swing.JFrame {
 
     private void jMenu6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu6MouseClicked
         // TODO add your handling code here:
+        
+        
+          JOptionPane.showMessageDialog(null,"hola");
+        
+      if(gx.getRol().equals("A")|| gx.getRol().equals("M")){
+            escritorio.remove(ven);
+            //escritorio.remove(ven_f);
+            
+             //escritorio.remove(ini);
+             escritorio.remove(ven_e);
+             escritorio.remove(vent_p);
+               //escritorio.remove(ven_c_f);
+               //escritorio.remove(ven_prov);
+             
+             
+       
+       if(ven_c_f.isClosed()){
+            escritorio.remove(ven_c_f);
+            escritorio.add(ven_c_f);
+        }else{
+        escritorio.remove(ven_c_f);
+            escritorio.add(ven_c_f);
+        }
+       
+        ven_c_f.setVisible(true);
+        }else {
+        JOptionPane.showMessageDialog(null,"ACCESO BLOQUEADO");
+        
+        }
         //ven_f=new Ventana_Factura(gx);
       /*  if(gx.getRol().equals("E") || gx.getRol().equals("A")){
             escritorio.remove(ven);
@@ -355,8 +384,8 @@ public class Ventana extends javax.swing.JFrame {
         escritorio.remove(ven_e);
         //escritorio.remove(ven_f);
         escritorio.remove(ven);
-        escritorio.remove(tur);
-        //escritorio.remove(ven_c_f);
+        //escritorio.remove(tur);
+        escritorio.remove(ven_c_f);
           //escritorio.remove(ven_prov);
           //escritorio.remove(ven_a);
         if(vent_p.isClosed()){
@@ -505,15 +534,15 @@ public class Ventana extends javax.swing.JFrame {
              
              
        
-       if(tur.isClosed()){
-            escritorio.remove(tur);
-            escritorio.add(tur);
+       if(ven_c_f.isClosed()){
+            escritorio.remove(ven_c_f);
+            escritorio.add(ven_c_f);
         }else{
-        escritorio.remove(tur);
-            escritorio.add(tur);
+        escritorio.remove(ven_c_f);
+            escritorio.add(ven_c_f);
         }
        
-        tur.setVisible(true);
+        ven_c_f.setVisible(true);
         }else {
         JOptionPane.showMessageDialog(null,"ACCESO BLOQUEADO");
         

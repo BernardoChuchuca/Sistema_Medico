@@ -111,7 +111,7 @@ public class GestionPersonas {
              ctx=Conexion.getConnection();
             Statement st=ctx.createStatement();
             ResultSet rs=st.executeQuery("SELECT PER_NOMBRE"
-                    + " FROM PERSONA WHERE PER_NOMBRE = '"+ced+"'");
+                    + " FROM PERSONA WHERE PER_ROL = '"+ced+"'");
             while(rs.next()){
             us.add(rs.getString("PER_NOMBRE"));
                
