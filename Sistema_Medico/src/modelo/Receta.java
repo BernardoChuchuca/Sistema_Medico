@@ -14,6 +14,7 @@ public class Receta {
     private int rec_numero;
     private String dosis;
     private String frecuencia;
+    private int medi_id;
 
     public int getRec_id() {
         return rec_id;

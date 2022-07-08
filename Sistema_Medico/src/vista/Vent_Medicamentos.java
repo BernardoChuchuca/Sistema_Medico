@@ -336,7 +336,7 @@ public class Vent_Medicamentos extends javax.swing.JInternalFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         
-        ArrayList<Medicamento>lismed=new ArrayList<>();
+        //ArrayList<Medicamento>lismed=new ArrayList<>();
        
         tabla.setModel(new Tabla_Medicamentos(new GestionMedicamento().getListMedicamentos()));
         

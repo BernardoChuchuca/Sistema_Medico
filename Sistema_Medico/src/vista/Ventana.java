@@ -23,7 +23,7 @@ public class Ventana extends javax.swing.JFrame {
          //Turno tur=new Vent_Turno();
          Vent_Turno ven_c_f=new Vent_Turno();
          Vent_Consulta_Medica ven_prov=new Vent_Consulta_Medica();
-         Ven_CitaMedica ven_cit=new Ven_CitaMedica();
+         //Ven_CitaMedica ven_cit=new Ven_CitaMedica();
          //AnularFactura ven_a=new AnularFactura();
         
          
