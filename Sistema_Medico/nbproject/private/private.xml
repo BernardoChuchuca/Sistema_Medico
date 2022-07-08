@@ -7,7 +7,6 @@
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Medico.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/Gestion.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/GestionMedicamento.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Vent_Empleados.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Paciente.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/Conexion.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Tabla_Medicamentos.java</file>
@@ -16,7 +15,11 @@
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/GestionPersonas.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Login.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Medicamento.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Vent_Turno.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Vent_Pacientes.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Empleado.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Citas_Medicas.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Tabla_Empleados.java</file>
         </group>
         <group>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Ventana.java</file>

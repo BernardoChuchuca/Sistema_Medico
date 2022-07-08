@@ -38,7 +38,7 @@ public class Conexion {
                         Class.forName("com.mysql.jdbc.Driver");
                
                         String myDB="jdbc:oracle:thin:@localhost:1521:XE";
-                        Connection cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/Citas_Medicas","bernardo","bernardo123");
+                        Connection cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/Citas_Medicas","paul","CACAroto1598");
                         return cnx;
                         
                     }

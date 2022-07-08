@@ -88,6 +88,11 @@ public class Vent_Turno extends javax.swing.JInternalFrame {
         });
 
         numt.setEnabled(false);
+        numt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numtActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("GENERAR TURNO");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -226,6 +231,10 @@ public class Vent_Turno extends javax.swing.JInternalFrame {
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void numtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_numtActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
