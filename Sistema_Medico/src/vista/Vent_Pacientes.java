@@ -94,7 +94,7 @@ public class Vent_Pacientes extends javax.swing.JInternalFrame {
         jScrollPane1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jScrollPane1.setOpaque(false);
 
-        tabla.setBackground(new java.awt.Color(255, 255, 153));
+        tabla.setBackground(new java.awt.Color(204, 255, 204));
         tabla.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tabla.setFont(new java.awt.Font("DialogInput", 0, 14)); // NOI18N
         tabla.setModel(new vista.Tabla_Pacientes());
@@ -260,33 +260,29 @@ public class Vent_Pacientes extends javax.swing.JInternalFrame {
         jPanel3.setLayout(new java.awt.GridLayout(11, 1));
 
         lcod.setEditable(false);
-        lcod.setBackground(new java.awt.Color(153, 153, 153));
+        lcod.setBackground(new java.awt.Color(255, 255, 255));
         lcod.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         lcod.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel3.add(lcod);
 
-        jced.setBackground(new java.awt.Color(153, 153, 153));
         jced.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jced.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jced.setAlignmentX(0.2F);
         jced.setAlignmentY(0.2F);
         jPanel3.add(jced);
 
-        jnom.setBackground(new java.awt.Color(153, 153, 153));
         jnom.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jnom.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jnom.setAlignmentX(0.2F);
         jnom.setAlignmentY(0.2F);
         jPanel3.add(jnom);
 
-        jape.setBackground(new java.awt.Color(153, 153, 153));
         jape.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jape.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jape.setAlignmentX(0.2F);
         jape.setAlignmentY(0.2F);
         jPanel3.add(jape);
 
-        jeda.setBackground(new java.awt.Color(153, 153, 153));
         jeda.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jeda.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jeda.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -297,7 +293,7 @@ public class Vent_Pacientes extends javax.swing.JInternalFrame {
         jPanel3.add(jeda);
 
         jcar.setEditable(false);
-        jcar.setBackground(new java.awt.Color(153, 153, 153));
+        jcar.setBackground(new java.awt.Color(255, 255, 255));
         jcar.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jcar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jcar.setText("P");
@@ -305,7 +301,6 @@ public class Vent_Pacientes extends javax.swing.JInternalFrame {
         jcar.setAlignmentY(0.2F);
         jPanel3.add(jcar);
 
-        jcorr.setBackground(new java.awt.Color(153, 153, 153));
         jcorr.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jcorr.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel3.add(jcorr);
@@ -314,7 +309,7 @@ public class Vent_Pacientes extends javax.swing.JInternalFrame {
         jPanel6.setLayout(new java.awt.GridLayout(1, 3));
 
         jusu.setEditable(false);
-        jusu.setBackground(new java.awt.Color(204, 204, 204));
+        jusu.setBackground(new java.awt.Color(255, 255, 255));
         jusu.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jusu.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jusu.setAlignmentX(0.2F);
@@ -346,20 +341,18 @@ public class Vent_Pacientes extends javax.swing.JInternalFrame {
         jPanel3.add(jPanel6);
 
         jcont.setEditable(false);
-        jcont.setBackground(new java.awt.Color(153, 153, 153));
+        jcont.setBackground(new java.awt.Color(255, 255, 255));
         jcont.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jcont.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jcont.setText("null");
         jPanel3.add(jcont);
 
-        jtel.setBackground(new java.awt.Color(153, 153, 153));
         jtel.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jtel.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtel.setAlignmentX(0.2F);
         jtel.setAlignmentY(0.2F);
         jPanel3.add(jtel);
 
-        jdir.setBackground(new java.awt.Color(153, 153, 153));
         jdir.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jdir.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jdir.setAlignmentX(0.2F);
@@ -371,10 +364,10 @@ public class Vent_Pacientes extends javax.swing.JInternalFrame {
         getContentPane().add(jPanel4);
         jPanel4.setBounds(10, 20, 440, 540);
 
-        jLabel12.setBackground(new java.awt.Color(255, 153, 0));
+        jLabel12.setBackground(new java.awt.Color(153, 255, 153));
         jLabel12.setOpaque(true);
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(0, 0, 1330, 650);
+        jLabel12.setBounds(0, 0, 1330, 690);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

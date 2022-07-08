@@ -100,7 +100,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         setPreferredSize(new java.awt.Dimension(1342, 685));
         getContentPane().setLayout(null);
 
-        tabla.setBackground(new java.awt.Color(255, 255, 153));
+        tabla.setBackground(new java.awt.Color(204, 255, 255));
         tabla.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tabla.setFont(new java.awt.Font("DialogInput", 0, 14)); // NOI18N
         tabla.setModel(new Tabla_Empleados());
@@ -117,7 +117,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         jPanel1.setOpaque(false);
         jPanel1.setLayout(new java.awt.GridLayout(1, 5));
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 51));
+        jButton1.setBackground(new java.awt.Color(102, 0, 0));
         jButton1.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("ACTUALIZAR");
@@ -129,7 +129,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         });
         jPanel1.add(jButton1);
 
-        jButton4.setBackground(new java.awt.Color(0, 0, 51));
+        jButton4.setBackground(new java.awt.Color(102, 0, 0));
         jButton4.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("ELIMINAR");
@@ -141,7 +141,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         });
         jPanel1.add(jButton4);
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 51));
+        jButton2.setBackground(new java.awt.Color(102, 0, 0));
         jButton2.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("BUSCAR");
@@ -153,7 +153,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         });
         jPanel1.add(jButton2);
 
-        jButton5.setBackground(new java.awt.Color(0, 0, 51));
+        jButton5.setBackground(new java.awt.Color(102, 0, 0));
         jButton5.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("LISTAR");
@@ -165,7 +165,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         });
         jPanel1.add(jButton5);
 
-        jButton3.setBackground(new java.awt.Color(0, 0, 51));
+        jButton3.setBackground(new java.awt.Color(102, 0, 0));
         jButton3.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("REGISTRAR");
@@ -264,12 +264,11 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         jPanel3.setLayout(new java.awt.GridLayout(12, 1));
 
         lcod.setEditable(false);
-        lcod.setBackground(new java.awt.Color(204, 204, 204));
+        lcod.setBackground(new java.awt.Color(255, 255, 255));
         lcod.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         lcod.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel3.add(lcod);
 
-        jced.setBackground(new java.awt.Color(204, 204, 204));
         jced.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jced.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jced.setAlignmentX(0.2F);
@@ -281,21 +280,18 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         });
         jPanel3.add(jced);
 
-        jnom.setBackground(new java.awt.Color(204, 204, 204));
         jnom.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jnom.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jnom.setAlignmentX(0.2F);
         jnom.setAlignmentY(0.2F);
         jPanel3.add(jnom);
 
-        jape.setBackground(new java.awt.Color(204, 204, 204));
         jape.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jape.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jape.setAlignmentX(0.2F);
         jape.setAlignmentY(0.2F);
         jPanel3.add(jape);
 
-        jeda.setBackground(new java.awt.Color(204, 204, 204));
         jeda.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jeda.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jeda.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -309,14 +305,19 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         jPanel5.setLayout(new java.awt.GridLayout(1, 3));
 
         jcar.setEditable(false);
-        jcar.setBackground(new java.awt.Color(204, 204, 204));
+        jcar.setBackground(new java.awt.Color(255, 255, 255));
         jcar.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jcar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jcar.setAlignmentX(0.2F);
         jcar.setAlignmentY(0.2F);
+        jcar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcarActionPerformed(evt);
+            }
+        });
         jPanel5.add(jcar);
 
-        a.setBackground(new java.awt.Color(255, 102, 102));
+        a.setBackground(new java.awt.Color(255, 153, 102));
         a.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         a.setText("A");
         a.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -327,7 +328,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         });
         jPanel5.add(a);
 
-        e.setBackground(new java.awt.Color(255, 102, 102));
+        e.setBackground(new java.awt.Color(255, 153, 102));
         e.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         e.setText("M");
         e.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -340,7 +341,6 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
 
         jPanel3.add(jPanel5);
 
-        jcorr.setBackground(new java.awt.Color(204, 204, 204));
         jcorr.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jcorr.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel3.add(jcorr);
@@ -349,14 +349,14 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         jPanel6.setLayout(new java.awt.GridLayout(1, 3));
 
         jusu.setEditable(false);
-        jusu.setBackground(new java.awt.Color(204, 204, 204));
+        jusu.setBackground(new java.awt.Color(255, 255, 255));
         jusu.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jusu.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jusu.setAlignmentX(0.2F);
         jusu.setAlignmentY(0.2F);
         jPanel6.add(jusu);
 
-        a1.setBackground(new java.awt.Color(255, 102, 102));
+        a1.setBackground(new java.awt.Color(255, 153, 102));
         a1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         a1.setText("M");
         a1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -367,7 +367,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         });
         jPanel6.add(a1);
 
-        e1.setBackground(new java.awt.Color(255, 102, 102));
+        e1.setBackground(new java.awt.Color(255, 153, 102));
         e1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         e1.setText("F");
         e1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -380,19 +380,16 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
 
         jPanel3.add(jPanel6);
 
-        jcont.setBackground(new java.awt.Color(204, 204, 204));
         jcont.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jcont.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel3.add(jcont);
 
-        jtel.setBackground(new java.awt.Color(204, 204, 204));
         jtel.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jtel.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtel.setAlignmentX(0.2F);
         jtel.setAlignmentY(0.2F);
         jPanel3.add(jtel);
 
-        jdir.setBackground(new java.awt.Color(204, 204, 204));
         jdir.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jdir.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jdir.setAlignmentX(0.2F);
@@ -403,14 +400,14 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         jPanel7.setLayout(new java.awt.GridLayout(1, 2));
 
         esptx.setEditable(false);
-        esptx.setBackground(new java.awt.Color(204, 204, 204));
+        esptx.setBackground(new java.awt.Color(255, 255, 255));
         esptx.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         esptx.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         esptx.setAlignmentX(0.2F);
         esptx.setAlignmentY(0.2F);
         jPanel7.add(esptx);
 
-        espBox.setBackground(new java.awt.Color(0, 153, 255));
+        espBox.setBackground(new java.awt.Color(255, 255, 204));
         espBox.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         espBox.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         espBox.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -432,7 +429,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         getContentPane().add(jPanel4);
         jPanel4.setBounds(10, 30, 410, 500);
 
-        jLabel12.setBackground(new java.awt.Color(153, 153, 0));
+        jLabel12.setBackground(new java.awt.Color(204, 204, 204));
         jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel12.setOpaque(true);
         getContentPane().add(jLabel12);
@@ -679,6 +676,10 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
     private void jcedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcedActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcedActionPerformed
+
+    private void jcarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcarActionPerformed
 
     /**
      * @param args the command line arguments
