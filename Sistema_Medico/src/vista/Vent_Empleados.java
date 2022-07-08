@@ -98,7 +98,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         setMaximumSize(new java.awt.Dimension(1342, 685));
         setMinimumSize(new java.awt.Dimension(1342, 685));
         setPreferredSize(new java.awt.Dimension(1342, 685));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
         tabla.setBackground(new java.awt.Color(255, 255, 153));
         tabla.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -111,7 +111,8 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(tabla);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(429, 25, 890, -1));
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(429, 25, 890, 402);
 
         jPanel1.setOpaque(false);
         jPanel1.setLayout(new java.awt.GridLayout(1, 5));
@@ -176,7 +177,8 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         });
         jPanel1.add(jButton3);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 601, 1330, 50));
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 601, 1330, 50);
 
         jPanel4.setOpaque(false);
         jPanel4.setLayout(new java.awt.GridLayout(1, 2));
@@ -427,12 +429,14 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
 
         jPanel4.add(jPanel3);
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 410, 500));
+        getContentPane().add(jPanel4);
+        jPanel4.setBounds(10, 30, 410, 500);
 
         jLabel12.setBackground(new java.awt.Color(153, 153, 0));
         jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel12.setOpaque(true);
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1330, 650));
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(0, 0, 1330, 650);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -473,7 +477,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         per.setEsp_id(Integer.parseInt(esptx.getText()));
          new GestionPersonas().InsertPersona(per);
          JOptionPane.showMessageDialog(null,"REGISTRO CORRECTO");
-        
+        Vaciar();
         
         }else{
                JOptionPane.showMessageDialog(null,"TIPO DE CARGO INCORRECTO (A-E)");           
@@ -506,17 +510,7 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-         ArrayList<Persona>lisemp=new ArrayList<>();
-        ArrayList<Persona>listotal=new GestionPersonas().getListPersonas();
-        
-        for (int i = 0; i < listotal.size(); i++) {
-            
-            if(listotal.get(i).getPer_rol().equals("A") || listotal.get(i).getPer_rol().equals("M") ){
-                lisemp.add(listotal.get(i));
-            
-            }
-        }
-       tabla.setModel(new Tabla_Empleados(lisemp));
+        Listar();
        
        // System.out.println(new GestionPersonas().getBuscarCliente("1").getPer_id());
     }//GEN-LAST:event_jButton5ActionPerformed
@@ -575,7 +569,8 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         jtel.setText((String) tabla.getValueAt(tabla.getSelectedRow(), 9));
         jeda.setText(String.valueOf(tabla.getValueAt(tabla.getSelectedRow(), 10)));
         //lcod1.setText(String.valueOf(tabla.getValueAt(tabla.getSelectedRow(), 10)));
-    
+        
+        
        
     }//GEN-LAST:event_tablaMouseClicked
 
@@ -608,6 +603,9 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
         
         new GestionPersonas().ActualizarPersona(per);
         JOptionPane.showMessageDialog(null,"ACTULIZACION CORRECTA");
+        
+        Listar();
+        Vaciar();
        
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -806,7 +804,36 @@ public class Vent_Empleados extends javax.swing.JInternalFrame {
            
             
         }
+      }
+        public void Listar(){
+        
+             ArrayList<Persona>lisemp=new ArrayList<>();
+            ArrayList<Persona>listotal=new GestionPersonas().getListPersonas();
+        
+        for (int i = 0; i < listotal.size(); i++) {
+            
+            if(listotal.get(i).getPer_rol().equals("A") || listotal.get(i).getPer_rol().equals("M") ){
+                lisemp.add(listotal.get(i));
+            
+            }
+        }
+       tabla.setModel(new Tabla_Empleados(lisemp));
+        }
+        
+        public void Vaciar(){
+        lcod.setText("");
+        jced.setText("");
+        jnom.setText("");
+        jape.setText("");
+        jcorr.setText("");
+        jcar.setText("");
+        jusu.setText("");
+        jcont.setText("");
+        jdir.setText("");
+        jtel.setText("");
+        jeda.setText(""); 
+        }
     }
 
-}
+
 

@@ -86,7 +86,7 @@ public class Vent_Pacientes extends javax.swing.JInternalFrame {
         setMaximumSize(new java.awt.Dimension(1342, 685));
         setMinimumSize(new java.awt.Dimension(1342, 685));
         setPreferredSize(new java.awt.Dimension(1342, 685));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
         jScrollPane1.setBackground(new java.awt.Color(153, 153, 153));
         jScrollPane1.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -107,7 +107,8 @@ public class Vent_Pacientes extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(tabla);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(458, 25, 860, 520));
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(458, 25, 860, 520);
 
         jPanel1.setOpaque(false);
         jPanel1.setLayout(new java.awt.GridLayout(1, 5));
@@ -177,7 +178,8 @@ public class Vent_Pacientes extends javax.swing.JInternalFrame {
         });
         jPanel1.add(jButton2);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 1330, 60));
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 590, 1330, 60);
 
         jPanel4.setOpaque(false);
         jPanel4.setLayout(new java.awt.GridLayout(1, 2));
@@ -366,11 +368,13 @@ public class Vent_Pacientes extends javax.swing.JInternalFrame {
 
         jPanel4.add(jPanel3);
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 440, 540));
+        getContentPane().add(jPanel4);
+        jPanel4.setBounds(10, 20, 440, 540);
 
         jLabel12.setBackground(new java.awt.Color(255, 153, 0));
         jLabel12.setOpaque(true);
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1330, 650));
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(0, 0, 1330, 650);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

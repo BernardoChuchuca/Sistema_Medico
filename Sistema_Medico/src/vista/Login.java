@@ -55,7 +55,7 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(640, 342));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
         jPanel5.setOpaque(false);
         jPanel5.setLayout(new java.awt.GridLayout(2, 1));
@@ -136,16 +136,19 @@ public class Login extends javax.swing.JFrame {
 
         jPanel5.add(jPanel1);
 
-        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 550, 200));
+        getContentPane().add(jPanel5);
+        jPanel5.setBounds(30, 40, 550, 200);
 
         progreso.setBackground(new java.awt.Color(0, 0, 0));
         progreso.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         progreso.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(progreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 270, 30));
+        getContentPane().add(progreso);
+        progreso.setBounds(160, 250, 270, 30);
 
         jLabel3.setBackground(new java.awt.Color(51, 153, 0));
         jLabel3.setOpaque(true);
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 340));
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 640, 340);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
