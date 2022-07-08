@@ -4,17 +4,22 @@
  */
 package vista;
 
+import controlador.GestionMedicamento;
+import modelo.Receta;
+
 /**
  *
  * @author Bernardo
  */
-public class Vent_Receta extends javax.swing.JFrame {
 
+public class Vent_Receta extends javax.swing.JFrame {
+int num_receta;
     /**
      * Creates new form Receta
      */
-    public Vent_Receta() {
+    public Vent_Receta(int num_receta) {
         initComponents();
+        this.num_receta=num_receta;
     }
 
     /**
@@ -52,6 +57,11 @@ public class Vent_Receta extends javax.swing.JFrame {
         });
 
         jButton2.setText("GUARDAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -118,6 +128,21 @@ public class Vent_Receta extends javax.swing.JFrame {
         
         new Lista_Medicamentos(rec_med).setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+        Receta rec=new Receta();
+        
+        
+        rec.setRec_id(200);
+        rec.setFrecuencia(rec_fre.getText());
+        rec.setDosis(rec_doc.getText());
+        rec.setRec_numero(Integer.parseInt(rec_num.getText()));
+        rec.setMedi_id(new GestionMedicamento().getBuscarNombre(rec_med.getText()).getMed_id());
+        
+        num_receta=rec.getRec_id();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

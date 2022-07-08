@@ -16,6 +16,16 @@ public class Receta {
     private String frecuencia;
     private int medi_id;
 
+    public void setMedi_id(int medi_id) {
+        this.medi_id = medi_id;
+    }
+
+    public int getMedi_id() {
+        return medi_id;
+    }
+    
+    
+
     public int getRec_id() {
         return rec_id;
     }
@@ -51,12 +61,15 @@ public class Receta {
     public Receta() {
     }
 
-    public Receta(int rec_id, int rec_numero, String dosis, String frecuencia) {
+    public Receta(int rec_id, int rec_numero, String dosis, String frecuencia, int medi_id) {
         this.rec_id = rec_id;
         this.rec_numero = rec_numero;
         this.dosis = dosis;
         this.frecuencia = frecuencia;
+        this.medi_id = medi_id;
     }
+
+    
     
     
 }

@@ -19,11 +19,13 @@ import modelo.Turno;
  *
  * @author Bernardo
  */
+
 public class Vent_Consulta_Medica extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Vent_Consulta_Medica
      */
+    int num_receta=0;
     public Vent_Consulta_Medica() {
         initComponents();
     }
@@ -184,7 +186,7 @@ public class Vent_Consulta_Medica extends javax.swing.JInternalFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         
-        new Vent_Receta().setVisible(true);
+        new Vent_Receta(num_receta).setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
 

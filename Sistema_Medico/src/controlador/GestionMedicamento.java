@@ -108,6 +108,40 @@ public class GestionMedicamento {
         }
         return cl;
     }
+    
+    
+    public Medicamento getBuscarNombre(String cod) {
+        Medicamento cl = null;
+        Connection cnx = null;
+        try {
+            cnx = Conexion.getConnection();
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * "
+                    + "   FROM MEDICAMENTO WHERE MED_DESCRIPCION = '" + cod + "'");
+            while (rs.next()) {
+                cl = new Medicamento();
+                cl.setMed_id(rs.getInt("MED_ID"));
+                cl.setMed_codigo_barra(rs.getString("MED_CODIGO_BARRA"));
+                cl.setMed_marca(rs.getString("MED_MARCA"));
+                cl.setMed_descripcion(rs.getString("MED_DESCRIPCION"));
+                cl.setMed_cantidad(rs.getInt("MED_CANTIDAD"));
+                cl.setMed_unidad_medida(rs.getString("MED_UNIDAD_MEDIDA"));
+                cl.setMed_stock(rs.getInt("MED_STOCK"));
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+            System.out.println(e.getMessage());
+
+            System.out.println("Error en buscar");
+        } finally {
+            Conexion.close(cnx);
+            System.err.println("CONEXION CERRADA");
+
+        }
+        return cl;
+    }
 
     public void ActualizarPersona(Medicamento medicamento) {
         Connection cnx = null;
