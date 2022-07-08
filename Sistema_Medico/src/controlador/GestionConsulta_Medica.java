@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import modelo.Citas_Medicas;
 import modelo.Medicamento;
 import modelo.Turno;
 
@@ -17,25 +18,27 @@ import modelo.Turno;
  *
  * @author Usuario
  */
-public class GestionTurno {
+public class GestionConsulta_Medica {
 
-    public ArrayList<Turno> getListTurnos() {
+    public ArrayList<Citas_Medicas> getListCitas() {
 
-        ArrayList<Turno> med = new ArrayList<>();
+        ArrayList<Citas_Medicas> med = new ArrayList<>();
         Connection ctx = null;
         try {
             ctx = (Connection) Conexion.getConnection();
             Statement st = ctx.createStatement();
             ResultSet rs = st.executeQuery("SELECT *"
-                    + "FROM TURNO");
+                    + "FROM CITA_MEDICA");
             while (rs.next()) {
-                Turno med1 = new Turno();
+                Citas_Medicas med1 = new Citas_Medicas();
                 
-                med1.setTur_id(rs.getInt("TUR_ID"));
-                med1.setTur_num(rs.getInt("TUR_NUM"));
-                med1.setTur_per_id(rs.getInt("PER_ID"));
-                med1.setTur_med_id(rs.getInt("MED_ID"));
-                med1.setTur_fecha(rs.getDate("FECHA"));
+                med1.setId_cita(rs.getInt("CIT_ID"));
+                med1.setId_turno(rs.getInt("TUR_ID"));
+                med1.setCit_estado(rs.getString("CIT_ESTADO"));
+                med1.setCit_evaluacion(rs.getString("CIT_EVALUACION"));
+                med1.setCit_observacion(rs.getString("CIT_OBSERVACION"));
+                med1.setId_receta(rs.getInt("REC_ID"));
+               
 
                 med.add(med1);
 
@@ -51,17 +54,19 @@ public class GestionTurno {
 
     }
 
-    public void IngresarTurno(Turno medicamento) {
+    public void IngresarCita(Citas_Medicas medicamento) {
         Connection cnx = null;
 
         try {
             cnx = Conexion.getConnection();
-            PreparedStatement pst = cnx.prepareStatement("INSERT INTO TURNO  VALUES(?,?,?,?,?)");
-            pst.setInt(1, medicamento.getTur_id());
-            pst.setInt(2, medicamento.getTur_num());
-            pst.setDate(3, medicamento.getTur_fecha());
-            pst.setInt(4, medicamento.getTur_per_id());
-             pst.setInt(5, medicamento.getTur_med_id());
+            PreparedStatement pst = cnx.prepareStatement("INSERT INTO CITA_MEDICA  VALUES(?,?,?,?,?,?)");
+            pst.setInt(1, medicamento.getId_cita());
+            pst.setString(2, medicamento.getCit_estado());
+            pst.setString(3, medicamento.getCit_evaluacion());
+            pst.setString(4, medicamento.getCit_observacion());
+             pst.setInt(5, medicamento.getId_turno());
+              pst.setInt(6, medicamento.getId_receta());
+             
           
 
            

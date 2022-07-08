@@ -9,7 +9,7 @@ package modelo;
  * @author Bernardo
  */
 public class Citas_Medicas {
-    
+    private int id_cita;
     private String cit_estado;
     private String cit_evaluacion;
     private int id_turno;
@@ -18,6 +18,14 @@ public class Citas_Medicas {
 
     public String getCit_estado() {
         return cit_estado;
+    }
+
+    public void setId_cita(int id_citas) {
+        this.id_cita = id_citas;
+    }
+
+    public int getId_cita() {
+        return id_cita;
     }
 
     public void setCit_estado(String cit_estado) {
@@ -59,13 +67,16 @@ public class Citas_Medicas {
     public Citas_Medicas() {
     }
 
-    public Citas_Medicas(String cit_estado, String cit_evaluacion, int id_turno, String cit_observacion, int id_receta) {
+    public Citas_Medicas(int id_citas, String cit_estado, String cit_evaluacion, int id_turno, String cit_observacion, int id_receta) {
+        this.id_cita = id_citas;
         this.cit_estado = cit_estado;
         this.cit_evaluacion = cit_evaluacion;
         this.id_turno = id_turno;
         this.cit_observacion = cit_observacion;
         this.id_receta = id_receta;
     }
+
+    
     
     
     
