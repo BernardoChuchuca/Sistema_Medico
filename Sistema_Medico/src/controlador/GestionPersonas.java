@@ -102,6 +102,33 @@ public class GestionPersonas {
             
         }
 }
+     
+      public ArrayList<String> getListMedicos(){
+     String ced="M";
+    ArrayList<String> us=new ArrayList<>();
+    Connection ctx=null;
+        try {
+             ctx=Conexion.getConnection();
+            Statement st=ctx.createStatement();
+            ResultSet rs=st.executeQuery("SELECT PER_NOMBRE"
+                    + " FROM PERSONA WHERE PER_NOMBRE = '"+ced+"'");
+            while(rs.next()){
+            us.add(rs.getString("PER_NOMBRE"));
+               
+            }
+        } catch (SQLException ex) {
+             System.out.println(ex.getMessage());
+             
+            System.out.println("Error en Listado");
+        }finally{
+        Conexion.close(ctx);
+            //System.err.println("CONEXION CERRADA P");
+            
+        }
+    return us;
+    }
+    
+   
     /*public Persona getBuscarCliente(String codCli){
     Persona cl=null;
        try {
@@ -137,6 +164,44 @@ public class GestionPersonas {
             Statement st = cnx.createStatement();
             ResultSet rs = st.executeQuery("SELECT * "
                     + "   FROM PERSONA WHERE PER_CEDULA = '"+ced+"'");
+            while (rs.next()) {
+             cl=new Persona();
+             cl.setPer_id(rs.getInt("PER_ID"));
+             cl.setPer_cedula(rs.getString("PER_CEDULA"));
+             cl.setPer_nombre(rs.getString("PER_NOMBRE"));
+             cl.setPer_apellido(rs.getString("PER_APELLIDO"));
+             cl.setPer_direccion(rs.getString("PER_DIRECCION"));
+             cl.setPer_telefono(rs.getString("PER_TELEFONO"));
+             cl.setPer_fec_nac(rs.getDate("PER_FEC_NAC"));
+             cl.setPer_email(rs.getString("PER_EMAIL"));
+             cl.setPer_rol(rs.getString("PER_ROL"));
+             cl.setPer_genero(rs.getString("PER_GENERO"));
+             cl.setPer_clave(rs.getString("PER_CLAVE"));
+             cl.setEsp_id(rs.getInt("ESP_ID"));
+             
+            
+            }
+        } catch (SQLException  e ) {
+            e.printStackTrace();
+            
+            System.out.println(e.getMessage());
+            
+            System.out.println("Error en buscar");
+        }finally{
+        Conexion.close(cnx);
+            System.err.println("CONEXION CERRADA");
+            
+        }
+    return cl;
+    }
+    public Persona getBuscarnombre(String  ced){
+    Persona cl=null;
+    Connection cnx=null;
+       try {
+             cnx = Conexion.getConnection();
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * "
+                    + "   FROM PERSONA WHERE PER_NOMBRE = '"+ced+"'");
             while (rs.next()) {
              cl=new Persona();
              cl.setPer_id(rs.getInt("PER_ID"));

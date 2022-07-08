@@ -20,6 +20,7 @@ public class Ventana extends javax.swing.JFrame {
          Vent_Empleados ven_e=new Vent_Empleados();
         // Inicio ini=new Inicio();
          Vent_Medicamentos vent_p=new Vent_Medicamentos();
+         Turno tur=new Turno();
          //ConsultaFactura ven_c_f=new ConsultaFactura();
          //ConsultaCompra ven_prov=new ConsultaCompra();
          //AnularFactura ven_a=new AnularFactura();
@@ -73,7 +74,9 @@ public class Ventana extends javax.swing.JFrame {
         jMenu4 = new javax.swing.JMenu();
         jMenu5 = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
+        jMenu10 = new javax.swing.JMenu();
         jMenu8 = new javax.swing.JMenu();
+        jMenu11 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu9 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -150,13 +153,30 @@ public class Ventana extends javax.swing.JFrame {
         });
         jMenu1.add(jMenu6);
 
+        jMenu10.setBackground(new java.awt.Color(0, 0, 0));
+        jMenu10.setText("CITA MEDICA");
+        jMenu10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu10MouseClicked(evt);
+            }
+        });
+        jMenu1.add(jMenu10);
+
         jMenuBar1.add(jMenu1);
 
         jMenu8.setBackground(new java.awt.Color(255, 204, 0));
         jMenu8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jMenu8.setText("REPORTES");
+        jMenu8.setText("ACTIVIDADES");
         jMenu8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jMenu8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+
+        jMenu11.setText("TURNO");
+        jMenu11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu11ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenu11);
 
         jMenuItem2.setBackground(new java.awt.Color(255, 255, 153));
         jMenuItem2.setText("COMPRA-PROVEEDOR");
@@ -240,10 +260,11 @@ public class Ventana extends javax.swing.JFrame {
             //escritorio.remove(ini);
         escritorio.remove(ven_e);
         //escritorio.remove(ven_f);
-        //escritorio.remove(vent_p);
+        escritorio.remove(tur);
+        escritorio.remove(vent_p);
          //escritorio.remove(ven_c_f);
             // escritorio.remove(ven_prov);
-            // escritorio.remove(ven_a);
+            //escritorio.remove(ven_a);
          
         
         if(ven.isClosed()){
@@ -268,14 +289,15 @@ public class Ventana extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         if(gx.getRol().equals("A")  ){
-            /*escritorio.remove(ven);
-            escritorio.remove(ven_f);
-             escritorio.remove(ini);
+            escritorio.remove(ven);
+            //escritorio.remove(ven_f);
+            // escritorio.remove(ini);
+            escritorio.remove(tur);
              escritorio.remove(vent_p);
-             escritorio.remove(ven_c_f);
-             escritorio.remove(ven_a);
+             //escritorio.remove(ven_c_f);
+            // escritorio.remove(ven_a);
              
-               escritorio.remove(ven_prov);*/
+              // escritorio.remove(ven_prov);
        
        if(ven_e.isClosed()){
             escritorio.remove(ven_e);
@@ -333,6 +355,7 @@ public class Ventana extends javax.swing.JFrame {
         escritorio.remove(ven_e);
         //escritorio.remove(ven_f);
         escritorio.remove(ven);
+        escritorio.remove(tur);
         //escritorio.remove(ven_c_f);
           //escritorio.remove(ven_prov);
           //escritorio.remove(ven_a);
@@ -456,6 +479,46 @@ public class Ventana extends javax.swing.JFrame {
         
         }*/
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenu10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu10MouseClicked
+        // TODO add your handling code here:
+        
+        
+        //----------CITA MEDICA--------//
+        
+    }//GEN-LAST:event_jMenu10MouseClicked
+
+    private void jMenu11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu11ActionPerformed
+        // TODO add your handling code here:
+        
+         JOptionPane.showMessageDialog(null,"hola");
+        
+      if(gx.getRol().equals("A")|| gx.getRol().equals("M")){
+            escritorio.remove(ven);
+            //escritorio.remove(ven_f);
+            
+             //escritorio.remove(ini);
+             escritorio.remove(ven_e);
+             escritorio.remove(vent_p);
+               //escritorio.remove(ven_c_f);
+               //escritorio.remove(ven_prov);
+             
+             
+       
+       if(tur.isClosed()){
+            escritorio.remove(tur);
+            escritorio.add(tur);
+        }else{
+        escritorio.remove(tur);
+            escritorio.add(tur);
+        }
+       
+        tur.setVisible(true);
+        }else {
+        JOptionPane.showMessageDialog(null,"ACCESO BLOQUEADO");
+        
+        }
+    }//GEN-LAST:event_jMenu11ActionPerformed
       
     /**
      * @param args the command line arguments
@@ -464,6 +527,8 @@ public class Ventana extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu10;
+    private javax.swing.JMenu jMenu11;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
