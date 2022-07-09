@@ -190,13 +190,13 @@ public class Login extends javax.swing.JFrame {
                 
                 progreso.setStringPainted(true);
                 progreso.setValue(100);
-              JOptionPane.showMessageDialog(null,"ACABA DE INGRESAR COMO ADMINISTRADOR");
+              //JOptionPane.showMessageDialog(null,"ACABA DE INGRESAR COMO ADMINISTRADOR");
             }else {
                 progreso.setVisible(true);
                 
                 progreso.setStringPainted(true);
                 progreso.setValue(100);
-                JOptionPane.showMessageDialog(null,"ACABA DE INGRESAR COMO MEDICO");
+                //JOptionPane.showMessageDialog(null,"ACABA DE INGRESAR COMO MEDICO");
             }
              
                

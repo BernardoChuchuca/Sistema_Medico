@@ -311,7 +311,7 @@ public class Ventana extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         
-          JOptionPane.showMessageDialog(null,"hola");
+          //JOptionPane.showMessageDialog(null,"hola");
         
       if(gx.getRol().equals("A")|| gx.getRol().equals("M")){
             escritorio.remove(ven);
