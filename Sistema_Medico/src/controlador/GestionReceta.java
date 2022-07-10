@@ -63,8 +63,7 @@ public class GestionReceta {
            pst.setString(4, receta.getFrecuencia());
            pst.setInt(5, receta.getMedi_id());
            
-//Camila Pasaca
-            System.out.println("CAMILA NATHALY PASACA GAVILANEZ <3");
+
           
            pst.execute();
             

@@ -25,6 +25,7 @@ public class Vent_Consulta_Medica extends javax.swing.JInternalFrame {
     /**
      * Creates new form Vent_Consulta_Medica
      */
+    Turno tur;
     int num_receta=0;
     public Vent_Consulta_Medica() {
         initComponents();
@@ -161,13 +162,13 @@ public class Vent_Consulta_Medica extends javax.swing.JInternalFrame {
         
         
         
-        Turno tur=new GestionTurno().getBuscarTurno(new GestionPersonas().getBuscarCedula(ttur.getText()).getPer_id());
+        tur=new GestionTurno().getBuscarTurno(new GestionPersonas().getBuscarCedula(ttur.getText()).getPer_id());
         
         if(tur!=null){
            // JOptionPane.showMessageDialog(null,"Existe");
            persont.setText(new GestionPersonas().getBuscarCedula(ttur.getText()).getPer_nombre()+" "+new GestionPersonas().getBuscarCedula(ttur.getText()).getPer_apellido());
             
-           new GestionConsulta_Medica().IngresarCita(new Citas_Medicas(codigoid(), "A","sadas", tur.getTur_id(),"asdasd", 1));
+          
            
            
         }else{
@@ -181,6 +182,11 @@ public class Vent_Consulta_Medica extends javax.swing.JInternalFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        
+        
+        // new GestionConsulta_Medica().IngresarCita(new Citas_Medicas(codigoid(), "A","sadas", tur.getTur_id(),"asdasd", 1));
+        new GestionConsulta_Medica().IngresarCita(new Citas_Medicas(codigoid(), "A", "bueno",tur.getTur_id() ,"Bueno", num_receta));
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

@@ -5,7 +5,13 @@
 package vista;
 
 import controlador.GestionMedicamento;
+import controlador.GestionReceta;
+import controlador.GestionTurno;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import modelo.Receta;
+import modelo.Turno;
 
 /**
  *
@@ -135,13 +141,15 @@ int num_receta;
         Receta rec=new Receta();
         
         
-        rec.setRec_id(200);
+        rec.setRec_id(codigoid());
         rec.setFrecuencia(rec_fre.getText());
         rec.setDosis(rec_doc.getText());
         rec.setRec_numero(Integer.parseInt(rec_num.getText()));
         rec.setMedi_id(new GestionMedicamento().getBuscarNombre(rec_med.getText()).getMed_id());
         
+        new GestionReceta().InsertReceta(rec);
         num_receta=rec.getRec_id();
+        this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -159,4 +167,26 @@ int num_receta;
     private javax.swing.JTextField rec_med;
     private javax.swing.JTextField rec_num;
     // End of variables declaration//GEN-END:variables
+
+ public int codigoid(){
+   List<Receta>lispro=new GestionReceta().getListRecetas();
+           
+   ArrayList<Integer>lis=new ArrayList<>();
+   
+       for (int i = 0; i < lispro.size(); i++) {
+           lis.add(lispro.get(i).getRec_id());
+           
+       }
+       
+       Collections.sort(lis);
+       
+       int n=lis.get(lis.size()-1)+1;
+    
+   
+        return n;
+   
+   }
+
+
+
 }
