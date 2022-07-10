@@ -7,27 +7,6 @@
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Medico.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/Gestion.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/GestionMedicamento.java</file>
-
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Paciente.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/Conexion.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Tabla_Medicamentos.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Vent_Medicamentos.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Persona.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/GestionPersonas.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Login.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Medicamento.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Vent_Turno.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Vent_Pacientes.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Empleado.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Citas_Medicas.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Tabla_Empleados.java</file>
-        </group>
-        <group>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Ventana.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Medico.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/Gestion.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/GestionMedicamento.java</file>
-
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Paciente.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/Conexion.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Tabla_Medicamentos.java</file>
@@ -54,6 +33,25 @@
             <file>file:/C:/Users/Bernardo/Documents/NetBeansProjects/Sistema/Sistema_Medico/Sistema_Medico/src/modelo/Medicamento.java</file>
             <file>file:/C:/Users/Bernardo/Documents/NetBeansProjects/Sistema/Sistema_Medico/Sistema_Medico/src/modelo/Citas_Medicas.java</file>
             <file>file:/C:/Users/Bernardo/Documents/NetBeansProjects/Sistema/Sistema_Medico/Sistema_Medico/src/modelo/Paciente.java</file>
+        </group>
+        <group>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Ventana.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Medico.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/Gestion.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/GestionMedicamento.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Paciente.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/Conexion.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/GestionEspecialidad.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Paciente.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Tabla_Medicamentos.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Persona.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/GestionPersonas.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Login.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Receta.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/modelo/Medicamento.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Vent_Consulta_Medica.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/controlador/GestionReceta.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Sistema_Medico/Sistema_Medico/src/vista/Tabla_Empleados.java</file>
         </group>
     </open-files>
 </project-private>

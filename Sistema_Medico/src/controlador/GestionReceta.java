@@ -79,4 +79,37 @@ public class GestionReceta {
             
         }
     }
+ 
+    public Receta getBuscarNumero(int num) {
+        Receta cl = null;
+        Connection cnx = null;
+        try {
+            cnx = Conexion.getConnection();
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * "
+                    + "   FROM MEDICAMENTO WHERE REC_NUMERO = '" + num + "'");
+            while (rs.next()) {
+                cl = new Receta();
+                cl.setRec_id(rs.getInt("REC_ID"));
+                cl.setRec_numero(rs.getInt("REC_NUMERO"));
+                cl.setDosis(rs.getString("REC_DOSIS"));
+                cl.setFrecuencia(rs.getString("REC_FRECUENCIA"));
+                cl.setMedi_id(rs.getInt("REC_MEDI_ID"));
+                
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+            System.out.println(e.getMessage());
+
+            System.out.println("Error en buscar");
+        } finally {
+            Conexion.close(cnx);
+            System.err.println("CONEXION CERRADA");
+
+        }
+        return cl;
+    }
+ 
 }
